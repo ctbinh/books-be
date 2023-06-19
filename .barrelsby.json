@@ -7,7 +7,9 @@
         "./src/handlers",
         "./src/dtos/in",
         "./src/dtos/out",
-        "./src/repositories"
+        "./src/repositories",
+        "./src/interfaces",
+        "./src/middlewares"
     ],
     "exclude": [
         "__mock__",

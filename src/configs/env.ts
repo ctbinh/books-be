@@ -8,5 +8,7 @@ export const envs = cleanEnv(process.env, {
         choices: ['development', 'test', 'production', 'staging']
     }),
     CORS_WHITE_LIST: json<string[]>(),
-    DATABASE_URL: str()
+    DATABASE_URL: str(),
+    JWT_SECRET: str(),
+    COOKIE_SECRET: str()
 });

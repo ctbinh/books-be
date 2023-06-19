@@ -1,14 +1,31 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es2017",
-    "module": "commonjs",
+    "sourceRoot": "src",
+    "outDir": "dist",
+    "module": "CommonJS",
+    "target": "ESNext",
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "newLine": "LF",
+    "noEmit": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "rootDir": "./src",
-    "outDir": "./build",
+    "resolveJsonModule": true,
+    "lib": ["ESNext", "dom", "ESNext.AsyncIterable"],
+    "typeRoots": ["./node_modules/@types"],
+    
     "paths": {
       "@configs": ["src/configs"],
       "@configs/*": ["src/configs/*"],
@@ -18,6 +35,9 @@
       "@dtos/out": ["src/dtos/out"],
       "@handlers": ["src/handlers"],
       "@dtos/common": ["src/dtos/common.dto"],
+      "@repositories": ["src/repositories"],
+      "@interfaces": ["src/interfaces"],
+      "@middlewares": ["src/middlewares"]
     }
   }
 }

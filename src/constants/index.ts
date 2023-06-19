@@ -3,4 +3,5 @@
  */
 
 export * from './constraints';
+export * from './errorMessages';
 export * from './swagger';

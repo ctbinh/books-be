@@ -1,6 +1,7 @@
 import fastify from 'fastify';
 import { envs, swaggerConfig, swaggerUIConfig } from '@configs';
-import { authRoute } from './routes';
+import { authRoute, bookPlugin } from './routes';
+import type { FastifyCookieOptions } from '@fastify/cookie';
 
 export function createServer(config: ServerConfig) {
     const app = fastify({ logger: true });
@@ -10,6 +11,10 @@ export function createServer(config: ServerConfig) {
     app.register(import('@fastify/cors'), {
         origin: envs.CORS_WHITE_LIST
     });
+    app.register(import('@fastify/cookie'), {
+        secret: envs.COOKIE_SECRET, // for cookies signature
+        hook: 'onRequest'
+    } as FastifyCookieOptions);
 
     // Swagger on production will be turned off in the future
     if (envs.NODE_ENV === 'development' || envs.NODE_ENV === 'staging' || envs.NODE_ENV === 'production') {
@@ -18,6 +23,7 @@ export function createServer(config: ServerConfig) {
     }
 
     app.register(authRoute, { prefix: '/auth' });
+    app.register(bookPlugin, { prefix: '/books' });
 
     app.ready().then(() => {
         app.swagger({ yaml: true });
