@@ -6,8 +6,13 @@
         "./src/utils",
         "./src/handlers",
         "./src/dtos/in",
-        "./src/dtos/out"
+        "./src/dtos/out",
+        "./src/repositories"
     ],
-    "exclude": ["__mock__", "__mocks__", ".spec.ts"],
+    "exclude": [
+        "__mock__",
+        "__mocks__",
+        ".spec.ts"
+    ],
     "delete": true
 }

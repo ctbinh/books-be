@@ -6,6 +6,7 @@ export const envs = cleanEnv(process.env, {
     NODE_ENV: str<Environment>({
         devDefault: 'development',
         choices: ['development', 'test', 'production', 'staging']
-    }), 
+    }),
     CORS_WHITE_LIST: json<string[]>(),
+    DATABASE_URL: str()
 });
