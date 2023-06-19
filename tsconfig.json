@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2017",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "rootDir": "./src",
+    "outDir": "./build",
+    "paths": {
+      "@configs": ["src/configs"],
+      "@configs/*": ["src/configs/*"],
+      "@constants": ["src/constants"],
+      "@utils": ["src/utils"],
+      "@dtos/in": ["src/dtos/in"],
+      "@dtos/out": ["src/dtos/out"],
+      "@handlers": ["src/handlers"],
+      "@dtos/common": ["src/dtos/common.dto"],
+    }
+  }
+}
