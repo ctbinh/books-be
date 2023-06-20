@@ -9,7 +9,8 @@ export function createServer(config: ServerConfig) {
     app.register(import('@fastify/sensible'));
     app.register(import('@fastify/helmet'));
     app.register(import('@fastify/cors'), {
-        origin: envs.CORS_WHITE_LIST
+        origin: envs.CORS_WHITE_LIST,
+        credentials: true
     });
     app.register(import('@fastify/cookie'), {
         secret: envs.COOKIE_SECRET, // for cookies signature
