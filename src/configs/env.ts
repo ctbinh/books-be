@@ -10,5 +10,8 @@ export const envs = cleanEnv(process.env, {
     CORS_WHITE_LIST: json<string[]>(),
     DATABASE_URL: str(),
     JWT_SECRET: str(),
-    COOKIE_SECRET: str()
+    COOKIE_SECRET: str(),
+    ELASTICSEARCH_URL: str(),
+    ELASTICSEARCH_USERNAME: str(),
+    ELASTICSEARCH_PASSWORD: str(),
 });

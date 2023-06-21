@@ -12,6 +12,7 @@
     "db:migrate": "npx prisma db push"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^8.8.1",
     "@fastify/cookie": "^8.3.0",
     "@fastify/cors": "^8.3.0",
     "@fastify/helmet": "^10.1.1",

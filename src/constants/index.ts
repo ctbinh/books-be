@@ -3,5 +3,6 @@
  */
 
 export * from './constraints';
+export * from './elasticsearch';
 export * from './errorMessages';
 export * from './swagger';

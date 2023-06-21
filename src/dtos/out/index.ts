@@ -3,3 +3,4 @@
  */
 
 export * from './auth.dtos';
+export * from './book.dtos';
