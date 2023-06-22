@@ -10,6 +10,8 @@ cp .env.example .env
 You need to fill out environment in `.env` file before going to next steps.
 You can set DATABASE_URL="" because I haven't used it yet
 
+Set up and run Elasticsearch
+
 After configuring environment, you can run app with:
 
 ```bash
